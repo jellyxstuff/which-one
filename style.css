@@ -1,0 +1,129 @@
+/* Estilos gerais */
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #ff79c6, #ff5555, #ff79c6);
+  background-size: 300% 300%;
+  animation: gradientAnimation 6s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Estilos do botão de gradiente */
+button.gradient {
+  background: linear-gradient(90deg, #ff79c6, #ff5555);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.gradient:hover {
+  transform: scale(1.05);
+}
+
+button.gradient:active {
+  transform: scale(0.95);
+}
+
+/* Estilos do container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos do card */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  /* Mantém a proporção de altura maior que a largura */
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Título */
+h2 {
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+    padding: 15px;
+    aspect-ratio: auto;
+    /* Remove proporção fixa em telas menores */
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Media Query para tablets */
+@media (max-width: 900px) {
+  .card {
+    padding: 15px;
+    /* Ajuste no padding para telas médias */
+  }
+}
